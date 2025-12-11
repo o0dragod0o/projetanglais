@@ -223,3 +223,74 @@ footer {
     nav { flex-wrap: wrap; }
     .team-credits span { display: block; margin: 5px 0; }
 }
+/* --- AJOUTS V3 : ICONE HOME, WIDGETS & SOCIAL --- */
+
+/* Icône Home dans la navigation */
+.home-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px; /* Espace avant les catégories */
+    font-size: 1.2rem;
+    color: white; /* Couleur par défaut */
+    transition: transform 0.2s;
+}
+
+.home-icon:hover {
+    transform: scale(1.2); /* Grossit légèrement au survol */
+    color: var(--accent-color);
+}
+
+/* Widgets Sidebar (Sondage, Citation) */
+.sidebar-widget {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-top: 3px solid var(--primary-color);
+}
+
+.poll-option {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    background: #eee;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.poll-option:hover {
+    background: #ddd;
+}
+
+.quote-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.quote-author {
+    text-align: right;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+/* Réseaux sociaux dans le footer */
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #ccc;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: white;
+}

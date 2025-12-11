@@ -18,6 +18,8 @@
             <p>Passion. Performance. Glory.</p>
         </div>
         <nav>
+            <a href="index.html" class="home-icon" title="Back to Home">🏠</a>
+            
             <a href="category.html">All News</a>
             <a href="category.html?cat=athletics">Athletics</a>
             <a href="category.html?cat=football">Football</a>
@@ -49,6 +51,12 @@
                         <li style="margin-bottom: 10px;"><a href="article.html?id=f1"><strong>F1:</strong> 2026 Rules.</a></li>
                         <li style="margin-bottom: 10px;"><a href="article.html?id=golf"><strong>Golf:</strong> Greg Owen wins.</a></li>
                     </ul>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h3>Quote of the Day</h3>
+                    <p class="quote-text">"Champions keep playing until they get it right."</p>
+                    <p class="quote-author">- Billie Jean King</p>
                 </div>
             </div>
         </section>
@@ -116,46 +124,18 @@
 
             <aside>
                 <div class="sidebar-box">
-                    <h3>Live Scores</h3>
-                    
-                    <div style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
-                        <div style="font-size: 0.8rem; color: #d93025; font-weight: bold;">LIVE • 72'</div>
-                        <div style="display: flex; justify-content: space-between; margin-top: 5px;">
-                            <span>Man Utd</span> <strong>2</strong>
-                        </div>
-                        <div style="display: flex; justify-content: space-between;">
-                            <span>Tottenham</span> <strong>1</strong>
-                        </div>
+                    <h3>Live Scores 🔴</h3>
+                    <div id="live-scores-container">
+                        <p style="font-size:0.8rem; color:#666;">Connecting...</p>
                     </div>
+                </div>
 
-                    <div style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
-                        <div style="font-size: 0.8rem; color: #666;">Full Time</div>
-                        <div style="display: flex; justify-content: space-between; margin-top: 5px;">
-                            <span>Barcelona</span> <strong>3</strong>
-                        </div>
-                        <div style="display: flex; justify-content: space-between;">
-                            <span>Sevilla</span> <strong>0</strong>
-                        </div>
-                    </div>
-
-                    <div style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
-                        <div style="font-size: 0.8rem; color: #d93025; font-weight: bold;">NBA • Q4</div>
-                        <div style="display: flex; justify-content: space-between; margin-top: 5px;">
-                            <span>Lakers</span> <strong>110</strong>
-                        </div>
-                        <div style="display: flex; justify-content: space-between;">
-                            <span>Warriors</span> <strong>105</strong>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div style="font-size: 0.8rem; color: #666;">ATP Finals</div>
-                        <div style="margin-top: 5px;">
-                            <strong>Sinner</strong> leads <strong>Alcaraz</strong><br>
-                            <span style="font-size: 0.9rem;">6-4, 4-6, 2-1</span>
-                        </div>
-                    </div>
-
+                <div class="sidebar-widget">
+                    <h3>Weekly Poll</h3>
+                    <p>Who will win the Premier League?</p>
+                    <div class="poll-option" onclick="votePoll('Man City')">Man City</div>
+                    <div class="poll-option" onclick="votePoll('Arsenal')">Arsenal</div>
+                    <div class="poll-option" onclick="votePoll('Liverpool')">Liverpool</div>
                 </div>
             </aside>
         </div>
@@ -168,6 +148,9 @@
                 Bringing you the fastest scores, deepest analysis, and biggest stories from the world of sports.
             </p>
             
+            <div class="social-links">
+                <a href="#">📘</a> <a href="#">🐦</a> <a href="#">📸</a> <a href="#">▶️</a> </div>
+
             <p style="margin-top: 30px; font-size: 0.8rem;">&copy; 2025 SportsMag Live. Class Project.</p>
 
             <div class="team-credits">

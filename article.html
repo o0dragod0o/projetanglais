@@ -19,7 +19,6 @@
 
     <div class="container" style="margin-top: 40px;">
         <div class="content-grid">
-            
             <main id="article-main-content" style="background: white; padding: 40px; border-radius: 5px;">
                 <span id="art-tag" class="tag" style="background: #004aad;">Loading...</span>
                 <h1 id="art-title" style="font-size: 2.5rem; margin: 15px 0;">Loading Article...</h1>
@@ -30,24 +29,9 @@
 
             <aside>
                 <div class="sidebar-box">
-                    <h3>Live Scores</h3>
-                    <div style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
-                        <div style="font-size: 0.8rem; color: #d93025; font-weight: bold;">LIVE • 72'</div>
-                        <div style="display: flex; justify-content: space-between; margin-top: 5px;">
-                            <span>Man Utd</span> <strong>2</strong>
-                        </div>
-                        <div style="display: flex; justify-content: space-between;">
-                            <span>Tottenham</span> <strong>1</strong>
-                        </div>
-                    </div>
-                    <div>
-                        <div style="font-size: 0.8rem; color: #d93025; font-weight: bold;">NBA • Q4</div>
-                        <div style="display: flex; justify-content: space-between; margin-top: 5px;">
-                            <span>Lakers</span> <strong>110</strong>
-                        </div>
-                        <div style="display: flex; justify-content: space-between;">
-                            <span>Warriors</span> <strong>105</strong>
-                        </div>
+                    <h3>Live Scores 🔴</h3>
+                    <div id="live-scores-container">
+                        <p style="font-size:0.8rem; color:#666;">Connecting...</p>
                     </div>
                 </div>
 
@@ -60,8 +44,15 @@
                     </ul>
                 </div>
 
-                <div id="art-author-credit"></div>
+                <div id="art-author-credit"></div> 
 
+                <div class="sidebar-widget">
+                    <h3>Weekly Poll</h3>
+                    <p>Who will win the Premier League?</p>
+                    <div class="poll-option" onclick="votePoll('Man City')">Man City</div>
+                    <div class="poll-option" onclick="votePoll('Arsenal')">Arsenal</div>
+                    <div class="poll-option" onclick="votePoll('Liverpool')">Liverpool</div>
+                </div>
             </aside>
         </div>
     </div>
@@ -69,6 +60,9 @@
     <footer>
         <div class="container">
             <p style="font-size: 0.8rem;">&copy; 2025 SportsMag Live.</p>
+            <div class="social-links">
+                <a href="#">📘</a> <a href="#">🐦</a> <a href="#">📸</a>
+            </div>
             <div class="team-credits">
                 <span><strong>Kylian :</strong> Web Engineering</span>
                 <span>•</span>

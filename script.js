@@ -1,4 +1,4 @@
-/* --- BASE DE DONNÉES DES ARTICLES --- */
+/* --- BASE DE DONNÉES DES ARTICLES (Gardez votre DB actuelle) --- */
 const db = [
     {
         id: "athletics",
@@ -142,7 +142,7 @@ if(dateElement) {
     dateElement.innerHTML = new Date().toLocaleDateString("en-US", options);
 }
 
-/* --- LOGIQUE PAGE ARTICLE (Modifiée pour placer l'auteur dans la Sidebar) --- */
+/* --- LOGIQUE PAGE ARTICLE --- */
 const articleContainer = document.getElementById('article-main-content');
 if (articleContainer) {
     const params = new URLSearchParams(window.location.search);
@@ -155,10 +155,9 @@ if (articleContainer) {
         document.getElementById('art-meta').innerHTML = `Published on ${articleData.date}`;
         document.getElementById('art-img').src = articleData.image; 
 
-        // 1. Injecter le texte principal
         document.getElementById('art-body').innerHTML = articleData.content;
 
-        // 2. Créer la bulle auteur
+        // Bulle auteur
         const authorBubbleHTML = `
             <div class="author-bubble">
                 <strong>Article Credit</strong>
@@ -166,12 +165,8 @@ if (articleContainer) {
                 <span style="font-size: 1.1em; font-weight:bold; color:#333;">${articleData.author}</span>
             </div>
         `;
-
-        // 3. Injecter la bulle dans la sidebar (id="art-author-credit")
         const creditContainer = document.getElementById('art-author-credit');
-        if(creditContainer) {
-            creditContainer.innerHTML = authorBubbleHTML;
-        }
+        if(creditContainer) creditContainer.innerHTML = authorBubbleHTML;
         
     } else {
         articleContainer.innerHTML = "<h2>Article not found.</h2><p><a href='index.html'>Return home</a></p>";
@@ -210,3 +205,92 @@ if (categoryContainer) {
         categoryContainer.innerHTML = "<p>No articles found.</p>";
     }
 }
+
+/* =========================================
+   SIMULATEUR DE SCORES EN DIRECT
+   ========================================= */
+
+let liveMatches = [
+    { id: 1, sport: "Football", home: "Man Utd", away: "Tottenham", hScore: 2, aScore: 1, time: 72, status: "LIVE" },
+    { id: 2, sport: "Football", home: "Barcelona", away: "Sevilla", hScore: 0, aScore: 0, time: 12, status: "LIVE" },
+    { id: 3, sport: "NBA", home: "Lakers", away: "Warriors", hScore: 110, aScore: 108, time: "Q4 - 2:30", status: "LIVE" },
+    { id: 4, sport: "Tennis", home: "Sinner", away: "Alcaraz", info: "Set 3: 4-3", status: "LIVE" }
+];
+
+function renderLiveScores() {
+    const container = document.getElementById('live-scores-container');
+    if (!container) return; 
+
+    let html = "";
+    liveMatches.forEach(match => {
+        let scoreDisplay = "";
+        let timeDisplay = "";
+
+        if (match.sport === "Football") {
+            scoreDisplay = `
+                <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+                    <span>${match.home}</span> <strong>${match.hScore}</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <span>${match.away}</span> <strong>${match.aScore}</strong>
+                </div>
+            `;
+            timeDisplay = `<span style="color: #d93025; font-weight: bold; font-size: 0.8rem;">LIVE • ${match.time}'</span>`;
+        } 
+        else if (match.sport === "NBA") {
+            scoreDisplay = `
+                <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+                    <span>${match.home}</span> <strong>${match.hScore}</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <span>${match.away}</span> <strong>${match.aScore}</strong>
+                </div>
+            `;
+            timeDisplay = `<span style="color: #d93025; font-weight: bold; font-size: 0.8rem;">${match.time}</span>`;
+        }
+        else if (match.sport === "Tennis") {
+            scoreDisplay = `
+                <div style="margin-top:5px; font-size:0.9rem;">
+                    <strong>${match.home}</strong> vs <strong>${match.away}</strong><br>
+                    <span style="color:#555;">${match.info}</span>
+                </div>
+            `;
+            timeDisplay = `<span style="color: #d93025; font-weight: bold; font-size: 0.8rem;">LIVE</span>`;
+        }
+
+        html += `
+            <div style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
+                ${timeDisplay}
+                ${scoreDisplay}
+            </div>
+        `;
+    });
+    container.innerHTML = html;
+}
+
+function simulateGameUpdates() {
+    liveMatches.forEach(match => {
+        if (match.sport === "Football" && match.time < 90) {
+            match.time++; // +1 minute
+            if (Math.random() > 0.95) { // 5% chance but
+                if (Math.random() > 0.5) match.hScore++;
+                else match.aScore++;
+            }
+        }
+        if (match.sport === "NBA") {
+             if (Math.random() > 0.7) match.hScore += 2;
+             if (Math.random() > 0.7) match.aScore += 2;
+        }
+    });
+    renderLiveScores();
+}
+
+// GESTION DU SONDAGE
+function votePoll(option) {
+    alert("Thanks for voting for: " + option);
+}
+
+// Lancement
+renderLiveScores();
+// 60000ms = 60 secondes (Vrai temps réel)
+setInterval(simulateGameUpdates, 60000);
