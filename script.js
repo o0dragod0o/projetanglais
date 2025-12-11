@@ -6,7 +6,6 @@ const db = [
         title: "John Ridgeon says I was too pessimistic about his sport — and he might be right",
         author: "The Guardian / World Athletics",
         date: "Tue 2 Dec 2025",
-        // Image d'athlétisme
         image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80", 
         summary: "World Athletics CEO John Ridgeon argues that the sport is growing faster than critics think, citing record social media views and revenue.",
         content: `
@@ -143,7 +142,7 @@ if(dateElement) {
     dateElement.innerHTML = new Date().toLocaleDateString("en-US", options);
 }
 
-/* --- LOGIQUE PAGE ARTICLE (AVEC BULLE AUTEUR) --- */
+/* --- LOGIQUE PAGE ARTICLE (Modifiée pour placer l'auteur dans la Sidebar) --- */
 const articleContainer = document.getElementById('article-main-content');
 if (articleContainer) {
     const params = new URLSearchParams(window.location.search);
@@ -156,7 +155,10 @@ if (articleContainer) {
         document.getElementById('art-meta').innerHTML = `Published on ${articleData.date}`;
         document.getElementById('art-img').src = articleData.image; 
 
-        // CRÉATION DE LA BULLE AUTEUR
+        // 1. Injecter le texte principal
+        document.getElementById('art-body').innerHTML = articleData.content;
+
+        // 2. Créer la bulle auteur
         const authorBubbleHTML = `
             <div class="author-bubble">
                 <strong>Article Credit</strong>
@@ -165,8 +167,11 @@ if (articleContainer) {
             </div>
         `;
 
-        // INJECTION : Bulle + Contenu
-        document.getElementById('art-body').innerHTML = authorBubbleHTML + articleData.content;
+        // 3. Injecter la bulle dans la sidebar (id="art-author-credit")
+        const creditContainer = document.getElementById('art-author-credit');
+        if(creditContainer) {
+            creditContainer.innerHTML = authorBubbleHTML;
+        }
         
     } else {
         articleContainer.innerHTML = "<h2>Article not found.</h2><p><a href='index.html'>Return home</a></p>";
