@@ -6,7 +6,7 @@ const db = [
         title: "John Ridgeon says I was too pessimistic about his sport — and he might be right",
         author: "The Guardian / World Athletics",
         date: "Tue 2 Dec 2025",
-        // Image: Stadium/Track (Unsplash) to represent the event
+        // Image d'athlétisme
         image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80", 
         summary: "World Athletics CEO John Ridgeon argues that the sport is growing faster than critics think, citing record social media views and revenue.",
         content: `
@@ -62,7 +62,6 @@ const db = [
         title: "England’s Greg Owen clinches MCB Mauritius Legends title in dramatic finale",
         author: "Legends Tour",
         date: "Dec 2025",
-        // Image: Golf Green (Unsplash)
         image: "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=800&q=80",
         summary: "Greg Owen clinched the title by a single stroke after draining a clutch birdie on the 18th at Constance Belle Mare Plage.",
         content: `
@@ -144,7 +143,7 @@ if(dateElement) {
     dateElement.innerHTML = new Date().toLocaleDateString("en-US", options);
 }
 
-/* --- LOGIQUE PAGE ARTICLE --- */
+/* --- LOGIQUE PAGE ARTICLE (AVEC BULLE AUTEUR) --- */
 const articleContainer = document.getElementById('article-main-content');
 if (articleContainer) {
     const params = new URLSearchParams(window.location.search);
@@ -154,9 +153,21 @@ if (articleContainer) {
     if (articleData) {
         document.getElementById('art-tag').textContent = articleData.category;
         document.getElementById('art-title').textContent = articleData.title;
-        document.getElementById('art-meta').innerHTML = `By <strong>${articleData.author}</strong> | ${articleData.date}`;
+        document.getElementById('art-meta').innerHTML = `Published on ${articleData.date}`;
         document.getElementById('art-img').src = articleData.image; 
-        document.getElementById('art-body').innerHTML = articleData.content;
+
+        // CRÉATION DE LA BULLE AUTEUR
+        const authorBubbleHTML = `
+            <div class="author-bubble">
+                <strong>Article Credit</strong>
+                Written by:<br>
+                <span style="font-size: 1.1em; font-weight:bold; color:#333;">${articleData.author}</span>
+            </div>
+        `;
+
+        // INJECTION : Bulle + Contenu
+        document.getElementById('art-body').innerHTML = authorBubbleHTML + articleData.content;
+        
     } else {
         articleContainer.innerHTML = "<h2>Article not found.</h2><p><a href='index.html'>Return home</a></p>";
     }
