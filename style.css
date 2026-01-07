@@ -195,11 +195,10 @@ footer {
 
 /* --- BULLE AUTEUR (Modifiée pour la Sidebar) --- */
 .author-bubble {
-    /* Plus de float ni de largeur fixe, elle s'adapte à la sidebar */
     width: 100%;
     background: #f1f3f5;
     padding: 15px;
-    margin-bottom: 20px; /* Espace en bas */
+    margin-bottom: 20px; 
     border-radius: 8px;
     border-left: 5px solid var(--primary-color);
     font-size: 0.9rem;
@@ -223,25 +222,24 @@ footer {
     nav { flex-wrap: wrap; }
     .team-credits span { display: block; margin: 5px 0; }
 }
+
 /* --- AJOUTS V3 : ICONE HOME, WIDGETS & SOCIAL --- */
 
-/* Icône Home dans la navigation */
 .home-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-right: 15px; /* Espace avant les catégories */
+    margin-right: 15px; 
     font-size: 1.2rem;
-    color: white; /* Couleur par défaut */
+    color: white; 
     transition: transform 0.2s;
 }
 
 .home-icon:hover {
-    transform: scale(1.2); /* Grossit légèrement au survol */
+    transform: scale(1.2); 
     color: var(--accent-color);
 }
 
-/* Widgets Sidebar (Sondage, Citation) */
 .sidebar-widget {
     background: #fff;
     padding: 15px;
@@ -278,7 +276,6 @@ footer {
     color: var(--primary-color);
 }
 
-/* Réseaux sociaux dans le footer */
 .social-links {
     margin-top: 15px;
 }
@@ -294,3 +291,40 @@ footer {
 .social-links a:hover {
     color: white;
 }
+
+/* --- FACT CHECK & ENRICHED CONTENT (NOUVEAU) --- */
+.trust-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.trust-high { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.trust-med { background-color: #fff3cd; color: #856404; border: 1px solid #ffeeba; }
+
+.fact-check-box {
+    background: #f8f9fa;
+    border-left: 4px solid #28a745;
+    padding: 15px;
+    margin: 30px 0 20px 0;
+    font-size: 0.9rem;
+    border-radius: 0 5px 5px 0;
+}
+.fact-check-title { font-weight: bold; color: #28a745; display: block; margin-bottom: 5px; }
+
+.summary-box {
+    background-color: #e3f2fd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-left: 5px solid #004aad;
+}
+.summary-box h3 { color: #004aad; margin-bottom: 10px; font-size: 1.1rem; }
+.summary-box ul { padding-left: 20px; }
+.summary-box li { margin-bottom: 5px; }
