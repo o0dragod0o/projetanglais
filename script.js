@@ -1,140 +1,198 @@
 /* --- BASE DE DONNÉES DES ARTICLES --- */
 const db = [
+    // --- ARTICLES DE REMI ---
+    {
+        id: "reform-uk",
+        category: "politics",
+        title: "Reform UK Leader Farage Under Scrutiny Over Past Remarks",
+        author: "Remi",
+        date: "Sun 24 Nov 2025",
+        image: "https://images.unsplash.com/photo-1529108190281-9a4f620bc2d8?auto=format&fit=crop&w=800&q=80", 
+        summary: "Nigel Farage faces increasing pressure to clarify his party's connections with Russia and address allegations.",
+        trust: "High", 
+        sources: ["The Guardian Testimonies", "Sky News Interview", "Reform UK Statements"],
+        keyPoints: [
+            "Reform UK leads Labour in polls but faces scrutiny on Russian ties.",
+            "Allegations of past racist remarks by Farage have resurfaced.",
+            "Farage admits to saying 'ridiculous things' in youth but denies intent to hurt."
+        ],
+        content: `
+            <p>Nigel Farage, the prominent leader of the far-right Reform UK party, is currently facing increasing pressure to clarify his party's connections with Russia. This comes as Reform UK tops recent polls, positioning Farage as a serious political figure in the UK, rather than the marginal provocateur he once was.</p>
+            <p>However, the controversies surrounding the 61-year-old architect of Brexit extend beyond current foreign policy. In mid-November, The Guardian published multiple testimonies alleging racist and antisemitic behaviour during Farage's attendance at Dulwich College in the 1980s.</p>
+            <p>Twenty former classmates spoke to the newspaper, with one, whose family survived the Holocaust, recalling a teenage Farage allegedly whispering deeply offensive phrases, including "Hitler was right." These claims echo an earlier finding from 2013, when a journalist unearthed a 1981 letter from a teacher who labelled the young Farage "racist" and "fascist."</p>
+            <p>When initially confronted, Farage downplayed the allegations, admitting he said "some ridiculous things" as a youth. As the controversy intensified, a Reform UK spokesperson dismissed the allegations as "entirely without foundation." On November 24, Farage himself broke his silence, telling Sky News he had "never directly really tried to go and hurt anybody" with his comments.</p>
+            <p>As his party leads the ruling Labour Party by a significant margin in the polls, Farage's past is now facing intense public and media scrutiny.</p>
+        `
+    },
+    {
+        id: "trump-doctrine",
+        category: "politics",
+        title: "The Trump Doctrine: Re-Carving the Global Landscape",
+        author: "Remi",
+        date: "Dec 2025",
+        // IMAGE MISE À JOUR
+        image: "https://img.etimg.com/thumb/width-1200,height-900,imgsize-740116,resizemode-75,msid-126326588/news/international/us/what-is-don-roe-doctrine-trump-rebrands-the-monroe-doctrine-after-nicols-maduro-is-captured.jpg", 
+        summary: "A new US National Security Strategy seemingly prioritizes spheres of influence, signaling a return to neo-imperialism.",
+        trust: "Medium", 
+        sources: ["US National Security Strategy Document", "Munich Security Conference Remarks"],
+        keyPoints: [
+            "New strategy suggests appeasing Russia and accommodating China.",
+            "The 'Trump Corollary' aims to reassert US dominance in Latin America.",
+            "US role in Asia shifts to a business-driven vision, unsettling allies."
+        ],
+        content: `
+            <p>A new US National Security Strategy has unveiled a significant shift in the Trump administration's approach to global affairs, seemingly prioritizing spheres of influence by appeasing Russia and accommodating China. While the document has formalized the increasingly harsh rhetoric towards the transatlantic relationship, as notably expressed by Vice President JD Vance in Munich, this European tension is not the central focus of the new policy.</p>
+            <h3>A Return to Neo-Imperialism in the Americas</h3>
+            <p>The core of the strategy appears to be an unabashed neo-imperialism aimed at Latin America. After years of perceived neglect, Washington intends to reassert its influence across the Americas, adopting interference as a guiding principle, a move already observed in countries like Panama.</p>
+            <p>The primary motivations for this aggressive comeback are twofold: pushing back against Beijing, which has expanded its presence in the region, and combating transnational issues like drug trafficking and migration.</p>
+            <p>This new approach is formally cemented by what is being called a "Trump corollary" to the historic Monroe Doctrine (1823). This addition is seen as an attempt by Donald Trump to secure a place in history by equating himself with former President Theodore Roosevelt, presenting his foreign policy as a return to an era where the region was treated as an American "backyard."</p>
+        `
+    },
+    {
+        id: "meta-ai",
+        category: "tech",
+        title: "EU Investigates Meta Over WhatsApp's AI Rollout",
+        author: "Remi",
+        date: "Thu 4 Dec 2025",
+        image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80", 
+        summary: "The European Union launches an antitrust investigation into Meta concerning potential restrictions on third-party AI providers.",
+        trust: "High", 
+        sources: ["European Commission Announcement", "EU Competition Chief Statement"],
+        keyPoints: [
+            "EU probe focuses on whether Meta restricts rival AI on WhatsApp Business.",
+            "Meta's own 'Meta AI' remains fully accessible.",
+            "Investigation aims to prevent dominant tech firms from crushing innovation."
+        ],
+        content: `
+            <p>The European Union has officially launched an antitrust investigation into Meta, the parent company of WhatsApp, concerning the introduction of new AI features. This move, announced on Thursday, December 4th, aims to determine if Meta's actions violate the bloc's competition rules.</p>
+            <p>The primary concern of the European Commission is a new policy from Meta that may restrict third-party AI providers from offering their services via WhatsApp. Specifically, this policy reportedly affects a tool within the business version of WhatsApp, limiting competing AI providers' ability to communicate with their customers.</p>
+            <p>Meanwhile, Meta's own AI service, "Meta AI," would remain fully accessible to users on the platform. EU competition chief Teresa Ribera emphasized the need to prevent "dominant digital incumbents from abusing their power to crowd out innovative competitors."</p>
+            <p>This investigation falls under the EU's established antitrust rules, rather than the newer digital legislation. The EU is looking into whether the new policy is illegal and if swift action is necessary to prevent potential irreparable harm to competition within the developing AI space.</p>
+        `
+    },
+    {
+        id: "japan-politics",
+        category: "politics",
+        title: "Japanese Politics: A Rightward Shift and the Disinformation Challenge",
+        author: "Remi",
+        date: "Dec 2025",
+        image: "https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?auto=format&fit=crop&w=800&q=80", 
+        summary: "Prime Minister Sanae Takaichi’s assertive stance highlights a growing right-wing influence and disinformation challenges in Japan.",
+        trust: "Medium", 
+        sources: ["Yomiuri Polls", "Diet Election Results 2024-2025"],
+        keyPoints: [
+            "Takaichi suggests military intervention if China attacks Taiwan.",
+            "64% of young Japanese adults approve of her hardline stance.",
+            "The ruling LDP is struggling, leading to a coalition with right-leaning figures."
+        ],
+        content: `
+            <p>Recent events in Japan, including Prime Minister Sanae Takaichi’s assertive stance on the China-Taiwan crisis, highlight a growing right-wing influence, particularly among younger generations.</p>
+            <h3>Takaichi's Nationalistic Appeal</h3>
+            <p>The crisis began with Takaichi's November 7th statement suggesting potential Japanese military intervention if China were to attack Taiwan. This position, which marks a significant policy shift, has surprisingly resonated with many. A Yomiuri poll showed that 64% of young adults (18–39) approve of her hardline stance.</p>
+            <h3>Political and Social Instability</h3>
+            <p>The political landscape reflects this social shift. The long-ruling Liberal Democratic Party (LDP) is in a period of weakness, having lost its absolute majority in both the lower and upper houses of the Diet in 2024 and 2025, respectively.</p>
+            <p>This climate of discontent has also fueled a wave of angry messages and, crucially, a spread of disinformation across social media platforms. The nation is currently grappling with this two-fold challenge: a struggling political establishment and an increasingly polarized public discourse.</p>
+        `
+    },
+    {
+        id: "zelensky-deal",
+        category: "politics",
+        title: "Zelensky Under Pressure to Cede Territory as US Pushes for 'Christmas Deal'",
+        author: "Remi",
+        date: "Dec 2025",
+        // IMAGE MISE À JOUR
+        image: "https://opinion-images.wsj.net/im-76447928/?size=1.5", 
+        summary: "Ukraine faces intense pressure from the US to accept a peace proposal involving significant territorial concessions by Christmas.",
+        trust: "Medium", 
+        sources: ["Financial Times Sources", "Draft Peace Proposal Leaks"],
+        keyPoints: [
+            "US pushing for a peace deal by Christmas.",
+            "Proposal requires Ukraine to cede Crimea and Donbas and ban NATO membership.",
+            "Zelensky faces a choice between a painful peace or risking greater losses."
+        ],
+        content: `
+            <p>Ukrainian President Volodymyr Zelensky is facing a major diplomatic and political dilemma: whether to accept a US-backed peace proposal that demands he surrender key territory to Russia. The intense pressure comes from the White House, which is reportedly pushing for a peace agreement "by Christmas," according to a source cited in the Financial Times.</p>
+            <p>The original peace proposal, an ambitious and controversial 28-point framework developed by the US and Russia, has been widely criticized for heavily favoring Moscow's demands. Core sticking points include:</p>
+            <ul>
+                <li><strong>Territorial Cessions:</strong> Ukraine required to recognize annexation of Crimea, Luhansk, and Donetsk.</li>
+                <li><strong>NATO Prohibition:</strong> Constitutional commitment to never join NATO.</li>
+                <li><strong>Military Limits:</strong> Armed forces limited to 600,000 personnel.</li>
+                <li><strong>Amnesty:</strong> Mutual amnesty for wartime actions.</li>
+            </ul>
+            <p>Zelensky's move to send a "revised" version prepared with European allies suggests an effort to negotiate more favorable terms. However, Russian President Vladimir Putin has asserted that if Ukraine refuses, Russian troops will "liberate these territories by force." This negotiation battle represents a defining moment in the war.</p>
+        `
+    },
+    {
+        id: "migration-deal",
+        category: "politics",
+        title: "Migrant Lives in Limbo: The Reality Behind the UK-France 'One In, One Out' Deal",
+        author: "Remi",
+        date: "Dec 2025",
+        // IMAGE MISE À JOUR
+        image: "https://img.lemde.fr/2025/10/24/246/0/2953/1476/1342/671/60/0/0d15052_upload-1-63jlwlamejj0-003-millerand-dscf8115.jpg", 
+        summary: "A new migration agreement creating a 'one in, one out' system causes distress and uncertainty for migrants crossing the Channel.",
+        trust: "High", 
+        sources: ["Migrant Testimonies", "UK-France Bilateral Agreement Details"],
+        keyPoints: [
+            "New deal: for every person sent back to France, one is admitted to the UK.",
+            "Migrants describe the process as a confusing 'lottery'.",
+            "Only ~20 people accepted into UK under the rule despite 37,000 crossings."
+        ],
+        content: `
+            <p>A new migration agreement between the United Kingdom and France, aiming to tackle irregular Channel crossings, is creating a complex and distressing reality for the migrants involved. This summer's bilateral "one in, one out" deal dictates that for every person sent back to France from the UK, one person on French territory should be admitted into Britain.</p>
+            <p>However, the human cost of this political mechanism is significant. For individuals like Binyam, a 26-year-old Eritrean, the process feels like a confusing and arbitrary "lottery." Having already made the perilous journey across the Channel in a small boat and then been sent back, he is one of at least 50 migrants returned to France under the agreement so far.</p>
+            <p>While nearly 37,000 people have successfully made the crossing this year, Binyam's experience highlights the growing uncertainty. To date, approximately 20 people have been accepted into the UK under the reciprocal part of the agreement. This disparity, alongside the administrative uncertainty, leaves many managing extreme psychological stress while their future remains entirely dependent on bureaucratic decisions.</p>
+        `
+    },
+
+    // --- ARTICLES ORIGINAUX ---
     {
         id: "athletics",
         category: "athletics",
-        title: "John Ridgeon says I was too pessimistic about his sport — and he might be right",
-        author: "The Guardian / World Athletics",
+        title: "John Ridgeon says I was too pessimistic about his sport",
+        author: "The Guardian",
         date: "Tue 2 Dec 2025",
         image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80", 
-        summary: "World Athletics CEO John Ridgeon argues that the sport is growing faster than critics think, citing record social media views and revenue.",
-        
-        // FACT CHECKING & RESUME
-        trust: "High", 
-        sources: ["World Athletics Data 2025", "Nielsen Research", "Official Interview Transcript"],
-        keyPoints: [
-            "World Athletics CEO denies the sport is in decline.",
-            "Revenue is up 25% and social media views doubled.",
-            "New formats (Ultimate Championship) aim to attract Gen Z."
-        ],
-        
-        content: `
-            <p>It’s quite a sight: midnight in Tokyo, Usain Bolt is behind the decks, the launch party for the World Athletics Ultimate Championships is buzzing — and suddenly World Athletics CEO Jon Ridgeon walks up to me and says: “I read your recent Guardian column, and I thought it was very unfair.”</p>
-            <p>Picture Gary Lineker flying into a tackle despite never having received a yellow card. This was the track-and-field equivalent. Ridgeon, a former world silver medallist in the 110m hurdles and one of the most measured and intelligent voices in sport, was telling me — politely but unmistakably — that he was annoyed.</p>
-            <p>It wasn’t that he completely rejected my argument that athletics needs to work harder to appeal to Gen Z and stay relevant. Rather, he felt the column leaned too heavily towards the negative and failed to acknowledge how much World Athletics has changed in recent years.</p>
-            <p>I like a good argument, so we started debating the points and looking for middle ground. Ridgeon, to his credit, admitted that some of his own friends agreed more with me than with him. I conceded that I should have highlighted certain achievements — including the Athletics Integrity Unit’s progress on doping.</p>
-            <p>But with Bolt turning the volume up to tinnitus levels, we eventually had to shift the conversation outside. Last weekend, though, we finally sat down properly to settle the debate. Think of it as Ridgeon v Ingle II: this time without the bass shaking the walls.</p>
-            <p>If this were a 1980s tabloid story, there might have been a photo of Ridgeon delivering a playful uppercut. Instead, after a brief warm-up exchange, we got into why the future might be brighter than I suggested a few months ago.</p>
-            <p>First, Ridgeon wanted to correct something. “In your column you quoted a US-based coach who implied the sport was asleep and in decline,” he said. “But on every metric — global TV audience, media reach, social media numbers, revenue — it’s growing.”</p>
-            <p>He pressed on: “Our income has risen by 25% in the last three or four years. Cities around the world are calling us asking to host world championships. And the biggest sporting event in 2025 was ours in Tokyo. That’s growth. Not complacency — growth.”</p>
-            <p>And he wasn’t done. “We’re not just sitting back saying: ‘Gen Z is difficult — let’s rely on our middle-aged fans.’”</p>
-            <p>There was a spark in his eye as he explained that World Athletics generated 700 million video views across its social media platforms during the September world championships — double the figure from Budapest two years earlier.</p>
-            <p>It is impressive. But my main point remains: while athletics shines at the Olympics and world championships, it still struggles to engage casual fans during the rest of the year.</p>
-            <p>Take Mondo Duplantis. He can clear a double-decker bus with nearly two metres to spare. Or marathon champion Sabastian Sawe, who runs 26.2 miles at an average pace of 4 minutes 40 seconds per mile. Unless you witness these feats up close, the scale of their brilliance is hard to grasp.</p>
-            <p>Ridgeon agrees, and says television needs to do more to show the extraordinary. “Broadcasts often sanitise these superhuman performances. We need to bring them to life,” he says. “Drone footage, especially, could transform the way we film events.”</p>
-            <p>He also notes that World Athletics’ data and research unit — which studies how fans react both in stadiums and at home — has already brought subtle improvements. They’ve even fitted spectators with sensors to measure emotional responses.</p>
-            <p>“Do people get sweaty palms watching the 100m? Or the shot put?” he asks. “You can guess the answer. But it shows we’re trying new things. It’s just challenging when the sport is 150 years old.”</p>
-            <p>More changes are coming. A World Treadmill Championships is on the horizon, aiming to connect with everyday gym-goers. And at next year’s Ultimate Championships, athletes will be allowed to bring their own social media teams to create content for their platforms. The aim is to amplify personalities and build rivalries essential to modern sport.</p>
-            <p>Ridgeon admits that athletes must realise they’re not just competing against the people in their lane or on the track — but also against every sport, TV show, and online distraction fighting for viewers. Jake Paul v Anthony Joshua may be absurd on many levels, but it will draw attention.</p>
-            <p>Despite the collapse of Grand Slam Track in its first US season, Ridgeon remains upbeat. He points to Nielsen research showing that one in seven people globally say they like athletics. The potential, he says, is enormous.</p>
-            <p>“But what we haven’t succeeded in doing is converting the billion people who jog to keep fit into actual athletics fans.”</p>
-            <p>So could athletics make a Formula One-style leap?</p>
-            <p>“We’ve got two groups of sports,” he says. “Football, F1 — the giants sucking up the money and the eyeballs. Then there are the traditional, usually Olympic sports that struggle. Athletics sits in the middle.”</p>
-            <p>Ridgeon pauses, then shifts to optimism.</p>
-            <p>“Our foundations are incredible. We should be able to break into the lower tier of those giants. We just have to keep pushing, keep the energy high, and maintain the trajectory.”</p>
-            <p>On that, at least, we agree.</p>
-        `
+        summary: "World Athletics CEO John Ridgeon argues that the sport is growing faster than critics think.",
+        trust: "High", sources: ["World Athletics Data"], keyPoints: ["Revenue up 25%", "Social media views doubled"],
+        content: "<p>It’s quite a sight: midnight in Tokyo...</p>"
     },
     {
         id: "alonso",
         category: "football",
-        title: "Real Madrid show fight but another setback leaves Xabi Alonso’s future hanging in the balance",
+        title: "Real Madrid show fight but another setback leaves Xabi Alonso’s future hanging",
         author: "Sid Lowe",
         date: "Thu 11 Dec 2025",
         image: "https://i.guim.co.uk/img/media/913c6b9720e0ac2ff32e66c4b1da3b673fbedacb/107_79_1151_921/master/1151.jpg?width=620&dpr=1&s=none&crop=none", 
-        summary: "On the night many believed his dismissal was imminent, Alonso watched his team push back against their fate only to fall short once more.",
-        
-        // FACT CHECKING & RESUME
-        trust: "Medium",
-        sources: ["Match Statistics (Opta)", "Press Conference Transcripts", "Club Insider Reports"],
-        keyPoints: [
-            "Real Madrid suffered their second defeat in four days.",
-            "Xabi Alonso's position is fragile but he remains in charge for now.",
-            "Key injuries to Mbappe and Carvajal impacted the game."
-        ],
-
-        content: `
-            <p>On the night many believed his dismissal was imminent, Xabi Alonso watched his team push back against their fate — and perhaps his — only to fall short once more. He heard the whistles from the crowd and the final whistle from the referee, hugged the man who once mentored him, and then disappeared quickly down the Bernabéu tunnel, his second home defeat in four days heavy on his shoulders.</p>
-            <p>Real Madrid had confronted Manchester City bravely, taking the lead and later chasing another comeback. But in the end, as Rodrygo — whose first goal in 33 matches briefly lifted the stadium — admitted, “it was not enough”.</p>
-            <p>Whether it will be enough to save the coach is the pressing question now. Late on Sunday night, in one of the club’s internal offices, several senior figures were ready to dismiss Alonso after a stretch of just two wins in seven games. His fate was postponed, but this match was widely considered a final verdict. Extending the poor run to eight games offers no assurance that he will remain in charge — yet it also doesn’t guarantee he will be removed. His future sits on a knife-edge.</p>
-            <p>Still, Madrid fought. They did not fold. The supporters whistled at times, but they also urged the team forward, sensing glimpses of the old Madrid — intensity, belief, defiance. Alonso insisted there was nothing to criticize in their attitude; in fact, he found plenty to praise. They were undone by a scruffy goal, a controversial penalty, and denied a dramatic, possibly deserved late equaliser by the thickness of the crossbar. Ultimately, there was no remontada, no unlikely resurrection.</p>
-            <p>After the match, Alonso greeted Pep Guardiola and left the field, his players lingering behind. “This bad spell will pass,” he said.</p>
-            <p>On the eve of their first meeting as opposing managers, Guardiola had been asked if he had any advice for Alonso. “Yes,” he replied. “Que mee con la suya.” That is: do it your way. Make your own decisions, free from pressures in the dressing room or the boardroom. Build the team on conviction, not compromise.</p>
-            <p>Whether Alonso did that here is debatable. He was missing Dani Carvajal, Éder Militão, Trent Alexander-Arnold, Ferland Mendy, David Alaba, Eduardo Camavinga, and Dean Huijsen. Kylian Mbappé was also ruled out by a last-minute ankle injury. There was, in truth, only so much he could change.</p>
-            <p>But his lineup was unconventional, stepping slightly away from the usual star-driven model: Vinícius Júnior returned to centre stage, Rodrygo shifted wide, and Dani Ceballos — a genuine midfield playmaker — was the evening’s surprise inclusion. Endrick came on later. At times, the performance showed promise.</p>
-            <p>Yet promise once again failed to bring points — and Alonso’s future remains more uncertain than ever.</p>
-        `
+        summary: "Alonso watched his team push back against their fate only to fall short once more.",
+        trust: "Medium", sources: ["Match Stats"], keyPoints: ["2nd defeat in 4 days", "Injuries impacted game"],
+        content: "<p>On the night many believed his dismissal was imminent...</p>"
     },
-    {
-        id: "golf",
-        category: "golf",
-        title: "England’s Greg Owen clinches MCB Mauritius Legends title in dramatic finale",
-        author: "Legends Tour",
-        date: "Dec 2025",
-        image: "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=800&q=80",
-        summary: "Greg Owen clinched the title by a single stroke after draining a clutch birdie on the 18th at Constance Belle Mare Plage.",
-        
-        // FACT CHECKING & RESUME
-        trust: "High",
-        sources: ["Legends Tour Official Results", "MCB Tour Championship Data", "Live Broadcast"],
-        keyPoints: [
-            "Greg Owen wins his first Legends Tour title in Mauritius.",
-            "Victory secured by a single stroke with a birdie on the 18th.",
-            "Owen overcame a double bogey on the 15th to hold off challengers."
-        ],
-
-        content: `
-            <p>England’s Greg Owen clinched the MCB Mauritius Legends title by a single stroke after draining a clutch birdie on the 18th at Constance Belle Mare Plage, edging out Jeev Milkha Singh and Darren Fichardt in the 2025 Legends Tour finale.</p>
-            <p>Owen looked untouchable when his ninth birdie of the round took him to -20 through 14 holes, but a disastrous four-putt double bogey on the 15th and another dropped shot on 17 opened the door for his rivals. Milkha Singh’s birdie at the last meant Owen needed at least a par on the final par five to secure his maiden Legends Tour victory.</p>
-            <p>The 53-year-old from Mansfield smoked his drive on 18, though play stalled as partner Craig Farrelly struggled in the volcanic rocks. Not wanting to lose rhythm, Owen announced he’d go ahead — then flushed a long iron to the heart of the green, giving himself an eagle chance and near-certain birdie.</p>
-            <p>But drama lingered: Fichardt, still able to tie, stiffed his second to 10 feet. His eagle putt shaved the hole, leaving Owen two putts for the title. He calmly lagged up and tapped in for birdie, sealing a seven-under 65 to cap rounds of 65 and 68 for an 18-under total.</p>
-            <p>Fichardt’s 66 and Milkha Singh’s strong finish left them one back. Singh, notably, was the first Indian to win on the DP World Tour.</p>
-            <p>Owen started the day like a man possessed: four straight birdies, then five more between the 6th and 14th. Victory seemed inevitable until the 15th-hole nightmare and the bogey on 17.</p>
-            <p>“For 16 holes it was probably the best I’ve ever played,” Owen said. “I’m just glad I didn’t have to hole that last one. It’s been a tough year — injuries, divorce… but this makes the grind worth it. I want more wins.”</p>
-            <p>Elsewhere, Peter Baker threatened a three-peat with a late surge before bogeys at the finish dropped him to fourth.</p>
-            <p>Michael Campbell, the 2005 U.S. Open champion, fired 66–65 over the weekend to tie for fifth with Scotland’s Stephen Gallacher, England’s Andrew Marshall, and Farrelly.</p>
-            <p>Welshman Jamie Donaldson, remembered for holing the winning putt in the 2014 Ryder Cup, rebounded from a poor second round with a strong 66.</p>
-        `
+    { 
+        id: "f1", 
+        category: "f1", 
+        title: "F1 2026: The sport is about to flip the script", 
+        author: "Formula 1", 
+        date: "Dec 2025", 
+        image: "https://cdn-5.motorsport.com/images/amp/2548KwJ0/s1000/f1-2026-fia-car-renders.webp", 
+        summary: "New technical rules and a reshaped grid.", 
+        trust: "High", 
+        sources: ["FIA"], 
+        keyPoints: ["Lighter cars", "No DRS"], 
+        content: "<p>2026 brings the most dramatic regulation overhaul...</p>" 
     },
-    {
-        id: "f1",
-        category: "f1",
-        title: "The 2025 Formula 1 season is wrapped up — but the sport is about to flip the script",
-        author: "Formula 1",
-        date: "Dec 2025",
-        image: "https://cdn-5.motorsport.com/images/amp/2548KwJ0/s1000/f1-2026-fia-car-renders.webp",
-        summary: "In 2026, F1 steps into a radically different era. New technical rules, a reshaped grid, and an 11th team will redefine the landscape.",
-        
-        // FACT CHECKING & RESUME
-        trust: "High",
-        sources: ["FIA 2026 Technical Regulations", "Formula 1 Official Press Release", "Team Principal Statements"],
-        keyPoints: [
-            "2026 cars will be 30kg lighter and 10cm narrower.",
-            "Engines will shift to 50% electric / 50% combustion power.",
-            "DRS is replaced by a push-to-pass 'override' system."
-        ],
-
-        content: `
-            <p>The 2025 Formula 1 season is wrapped up, with McLaren sweeping both the constructors’ and drivers’ titles. But the celebration won’t last long — the sport is about to flip the script.</p>
-            <p>In 2026, F1 steps into a radically different era. New technical rules, a reshaped grid, and an 11th team will redefine the landscape. Here’s what will matter next season.</p>
-            <h3>A bold new rulebook</h3>
-            <p>2026 brings the most dramatic regulation overhaul F1 has ever attempted. Cars will be lighter, smaller, and built around sustainability. The weight drops by 30kg, the width shrinks by 10cm, and the engines shift to an almost 50/50 balance between electric and combustion power, all running on fully sustainable fuels.</p>
-            <p>How will that transform racing? No one truly knows — even the drivers admit the unknowns are huge.</p>
-            <p>Chassis and power unit regulations have never been updated so heavily at the same time. Aerodynamics are being completely reshaped, and while the engines stay as 1.6-litre V6 turbo hybrids, the tech behind them changes dramatically. The MGU-H is gone, and hybrid output is roughly doubled.</p>
-            <p>Ground-effect floors introduced in 2022 are being scrapped, replaced by movable front and rear wings designed to boost straight-line speed and improve energy recovery under braking. These changes are expected to alter the feel of the car significantly — including quirks like engines revving at maximum in certain corners because the combustion engine will often act as a generator.</p>
-            <p>DRS disappears entirely. Instead, drivers will rely on a push-to-pass system that offers temporary bursts of electrical power.</p>
-            <p>Lewis Hamilton sums up the uncertainty: “It’s really, really hard to predict what it’s going to be like. It feels so different, and I’m not sure fans will love it — but maybe it’ll surprise us. Maybe overtaking will be incredible. Maybe easier. I don’t know. With less downforce and more torque, driving in the rain will be insanely tough. But who knows? Maybe the grip will be better than we think.”</p>
-        `
+    { 
+        id: "golf", 
+        category: "golf", 
+        title: "Greg Owen clinches MCB Mauritius Legends title", 
+        author: "Legends Tour", 
+        date: "Dec 2025", 
+        image: "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=800&q=80", 
+        summary: "Victory by a single stroke.", 
+        trust: "High", 
+        sources: ["Tour Results"], 
+        keyPoints: ["Birdie on 18th", "First Legends title"], 
+        content: "<p>England’s Greg Owen clinched the title...</p>" 
     },
     {
         id: "cycling",
@@ -143,27 +201,9 @@ const db = [
         author: "Cycling News",
         date: "Dec 2025",
         image: "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/45eb/live/88f0ddf0-ced8-11f0-9569-abed8c645734.jpg.webp",
-        summary: "The second successive year the race will begin outside Italy, covering 3,458km and finishing in Rome.",
-        
-        // FACT CHECKING & RESUME
-        trust: "High",
-        sources: ["RCS Sport Announcement", "Giro d'Italia Official Route", "UCI Calendar"],
-        keyPoints: [
-            "The 2026 Giro d'Italia will start with 3 stages in Bulgaria.",
-            "This marks the second consecutive 'Grande Partenza' abroad.",
-            "The race concludes in Rome on May 31st."
-        ],
-
-        content: `
-            <p>Bulgaria will host the first three stages of the 2026 Giro d'Italia - the second successive year it will begin outside Italy.</p>
-            <p>Albania hosted the opening three stages of this year's race in May, which since 2010 has started abroad seven times, including Jerusalem in 2018.</p>
-            <p>The three-week event will take place 8-31 May and finishes in Rome.</p>
-            <p>The 2026 edition will cover 3,458km with about 50,000 metres of elevation gain.</p>
-            <p>The Women's Giro d'Italia, which begins on 30 May, will not start in Bulgaria and instead begins in Cesenatico on Italy's east coast.</p>
-            <p>After nine stages it will finish on 7 June in Saluzzo.</p>
-            <p>Two-time winner Elisa Longo Borghini will be defending her title on home soil, while Britain's Simon Yates is the reigning men's champion.</p>
-            <p>The Giro d'Italia is one of cycling's three Grand Tours, alongside the Tour de France and Vuelta a Espana.</p>
-        `
+        summary: "The second successive year the race will begin outside Italy.",
+        trust: "High", sources: ["RCS Sport"], keyPoints: ["Starts in Bulgaria", "Finishes in Rome"],
+        content: "<p>Bulgaria will host the first three stages...</p>"
     },
     {
         id: "tennis",
@@ -172,30 +212,13 @@ const db = [
         author: "SportsMag Desk",
         date: "Dec 2025",
         image: "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/a8b0/live/1f874a00-ce9e-11f0-a58d-8f327674649c.jpg.webp",
-        summary: "The two-time French Open champion and Davis Cup icon leaves an immeasurable legacy.",
-        
-        // FACT CHECKING & RESUME
-        trust: "High",
-        sources: ["Italian Tennis Federation (FITP)", "Family Statement", "ATP Tour"],
-        keyPoints: [
-            "Nicola Pietrangeli, Italian tennis legend, passed away at 92.",
-            "He was the first Italian to win a Grand Slam (1959 & 1960).",
-            "Captained Italy to its first Davis Cup win in 1976."
-        ],
-
-        content: `
-            <p>Italian tennis legend Nicola Pietrangeli, a two-time French Open champion and one of the sport’s greats, has died at 92.</p>
-            <p>Pietrangeli became the first Italian to win a Grand Slam singles title when he lifted the Roland Garros trophy in 1959, defending it successfully in 1960. Over a career that brought him 48 titles, he was long regarded as Italy’s best-ever player until the rise of current world number two and four-time major champion Jannik Sinner.</p>
-            <p>“Italian tennis is mourning an icon,” the Italian Tennis Federation (FITP) announced, noting he remains the only Italian inducted into the International Tennis Hall of Fame.</p>
-            <p>Along with his two victories in Paris, Pietrangeli reached the French Open final in 1961 and 1964. He was also a giant of the Davis Cup, playing a record 164 matches for Italy, winning 120, and guiding the team to its first title in 1976.</p>
-            <p>ITF president David Haggerty praised him as “the true embodiment of everything the Davis Cup stands for — passion, prestige and national pride,” adding that Pietrangeli leaves an “immeasurable legacy” in world tennis.</p>
-            <p>Rafael Nadal, the 14-time French Open champion, also paid tribute on X, calling him “a great of Italian and world tennis”.</p>
-            <p>The organisers of the Italian Open, which Pietrangeli won twice, wrote: “With deep sadness we say goodbye to Nicola Pietrangeli, a true legend of Italian tennis. Ciao, Nicola.”</p>
-        `
+        summary: "The two-time French Open champion leaves an immeasurable legacy.",
+        trust: "High", sources: ["FITP"], keyPoints: ["Won Roland Garros twice", "Davis Cup captain"],
+        content: "<p>Italian tennis legend Nicola Pietrangeli...</p>"
     }
 ];
 
-/* --- LOGIQUE GLOBALE (Date) --- */
+/* --- LOGIQUE GLOBALE (Date du jour) --- */
 const dateElement = document.getElementById('date-display');
 if(dateElement) {
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -214,101 +237,129 @@ if (articleContainer) {
         document.getElementById('art-title').textContent = articleData.title;
         document.getElementById('art-meta').innerHTML = `Published on ${articleData.date}`;
         document.getElementById('art-img').src = articleData.image; 
-
-        // 1. Calcul et Affichage du Temps de Lecture
+        
         const wordCount = articleData.content.split(/\s+/).length;
-        const readTime = Math.ceil(wordCount / 200); // ~200 mots par minute
-        const timeBadge = `<span style="margin-left:15px; color:#555;">⏱️ ${readTime} min read</span>`;
-        document.getElementById('art-meta').insertAdjacentHTML('beforeend', timeBadge);
+        const readTime = Math.ceil(wordCount / 200);
+        document.getElementById('art-meta').insertAdjacentHTML('beforeend', `<span style="margin-left:15px; color:#555;">⏱️ ${readTime} min read</span>`);
 
-        // 2. Affichage du Badge de Confiance
         if (articleData.trust) {
             const trustClass = articleData.trust === "High" ? "trust-high" : "trust-med";
             const trustLabel = articleData.trust === "High" ? "✅ Verified Source" : "⚠️ Analysis";
-            const trustHTML = `<span class="trust-badge ${trustClass}">${trustLabel}</span>`;
-            document.getElementById('art-meta').insertAdjacentHTML('beforeend', trustHTML);
+            document.getElementById('art-meta').insertAdjacentHTML('beforeend', `<span class="trust-badge ${trustClass}">${trustLabel}</span>`);
         }
 
-        // 3. Injection du contenu principal
         document.getElementById('art-body').innerHTML = articleData.content;
 
-        // 4. Affichage de la boîte de résumé - Inséré AVANT le texte
         if (articleData.keyPoints) {
             const pointsHTML = articleData.keyPoints.map(pt => `<li>${pt}</li>`).join("");
-            const summaryHTML = `
-                <div class="summary-box">
-                    <h3>⚡ In a nutshell</h3>
-                    <ul>${pointsHTML}</ul>
-                </div>
-            `;
+            const summaryHTML = `<div class="summary-box"><h3>⚡ In a nutshell</h3><ul>${pointsHTML}</ul></div>`;
             document.getElementById('art-body').insertAdjacentHTML('afterbegin', summaryHTML);
         }
 
-        // 5. Affichage des Sources / Fact-Check - Inséré APRÈS le texte
         if (articleData.sources) {
             const sourcesList = articleData.sources.join(", ");
-            const factBox = `
-                <div class="fact-check-box">
-                    <span class="fact-check-title">🛡️ Fact-Check & Sources</span>
-                    <p>This article has been verified against: <strong>${sourcesList}</strong>.</p>
-                </div>
-            `;
+            const factBox = `<div class="fact-check-box"><span class="fact-check-title">🛡️ Fact-Check & Sources</span><p>Verified against: <strong>${sourcesList}</strong>.</p></div>`;
             document.getElementById('art-body').insertAdjacentHTML('beforeend', factBox);
         }
 
-        // Bulle auteur
-        const authorBubbleHTML = `
-            <div class="author-bubble">
-                <strong>Article Credit</strong>
-                Written by:<br>
-                <span style="font-size: 1.1em; font-weight:bold; color:#333;">${articleData.author}</span>
-            </div>
-        `;
         const creditContainer = document.getElementById('art-author-credit');
-        if(creditContainer) creditContainer.innerHTML = authorBubbleHTML;
-        
+        if(creditContainer) {
+            creditContainer.innerHTML = `
+                <div class="author-bubble">
+                    <strong>Article Credit</strong>
+                    Written by:<br>
+                    <span style="font-size: 1.1em; font-weight:bold; color:#333;">${articleData.author}</span>
+                </div>
+            `;
+        }
     } else {
         articleContainer.innerHTML = "<h2>Article not found.</h2><p><a href='index.html'>Return home</a></p>";
     }
 }
 
-/* --- LOGIQUE PAGE CATÉGORIE --- */
+/* --- LOGIQUE PAGE CATÉGORIE (AVEC PODCAST & REPORTAGE) --- */
 const categoryContainer = document.getElementById('category-list');
 if (categoryContainer) {
     const params = new URLSearchParams(window.location.search);
     const catFilter = params.get('cat');
-    
     const titleElement = document.getElementById('cat-title');
-    if(catFilter) titleElement.textContent = catFilter.toUpperCase() + " NEWS";
+    
+    // PODCAST
+    if (catFilter === 'podcast') {
+        titleElement.textContent = "LATEST PODCASTS 🎙️";
+        categoryContainer.innerHTML = `
+            <div class="media-wrapper">
+                <h4>Ep. 42: The Future of F1 Rules</h4>
+                <div class="fake-audio-player">
+                    <div class="audio-btn" onclick="alert('Playing podcast...')">▶</div>
+                    <div class="audio-bar"><div class="audio-progress" style="width:30%"></div></div>
+                    <span style="font-size:0.8rem; color:#666;">12:40 / 45:00</span>
+                </div>
+                <p style="margin-top:10px; font-size:0.9rem;">Join the team as we discuss the 2026 regulations and what they mean for Ferrari.</p>
+            </div>
+            <div class="media-wrapper">
+                <h4>Ep. 41: Premier League Crisis?</h4>
+                <div class="fake-audio-player">
+                    <div class="audio-btn" onclick="alert('Playing podcast...')">▶</div>
+                    <div class="audio-bar"><div class="audio-progress" style="width:0%"></div></div>
+                    <span style="font-size:0.8rem; color:#666;">00:00 / 32:15</span>
+                </div>
+                <p style="margin-top:10px; font-size:0.9rem;">Analysis of the weekend's shocking results.</p>
+            </div>
+        `;
+    } 
+    // REPORTAGE
+    else if (catFilter === 'reportage') {
+        titleElement.textContent = "VIDEO REPORTAGE 🎥";
+        categoryContainer.innerHTML = `
+            <div class="media-wrapper">
+                <div class="fake-video" onclick="alert('Playing video...')">
+                    <div class="play-icon">▶</div>
+                    <span style="position:absolute; bottom:10px; right:10px; font-size:1rem; background:rgba(0,0,0,0.7); padding:2px 5px; border-radius:3px;">10:24</span>
+                </div>
+                <h3 style="margin-top:10px;">Inside the Training Camp: Paris 2024</h3>
+                <p>Exclusive access to the athletes preparing for the games.</p>
+            </div>
+            <div class="media-wrapper">
+                <div class="fake-video" onclick="alert('Playing video...')">
+                    <div class="play-icon">▶</div>
+                    <span style="position:absolute; bottom:10px; right:10px; font-size:1rem; background:rgba(0,0,0,0.7); padding:2px 5px; border-radius:3px;">05:45</span>
+                </div>
+                <h3 style="margin-top:10px;">Tech in Sports: The AI Revolution</h3>
+                <p>How data is changing the way we watch football.</p>
+            </div>
+        `;
+    }
+    // ARTICLES CLASSIQUES
+    else {
+        if(catFilter) titleElement.textContent = catFilter.toUpperCase() + " NEWS";
+        const filteredArticles = catFilter ? db.filter(item => item.category === catFilter) : db;
+        categoryContainer.innerHTML = "";
 
-    const filteredArticles = catFilter ? db.filter(item => item.category === catFilter) : db;
-    categoryContainer.innerHTML = "";
-
-    if (filteredArticles.length > 0) {
-        filteredArticles.forEach(article => {
-            const cardHTML = `
-                <a href="article.html?id=${article.id}" class="article-link">
-                    <article class="article-card">
-                        <img src="${article.image}" class="card-img" alt="${article.title}">
-                        <div class="article-content">
-                            <span class="tag" style="background:#004aad; margin-bottom:5px; display:inline-block;">${article.category}</span>
-                            <h4>${article.title}</h4>
-                            <p>${article.summary}</p>
-                        </div>
-                    </article>
-                </a>
-            `;
-            categoryContainer.innerHTML += cardHTML;
-        });
-    } else {
-        categoryContainer.innerHTML = "<p>No articles found.</p>";
+        if (filteredArticles.length > 0) {
+            filteredArticles.forEach(article => {
+                categoryContainer.innerHTML += `
+                    <a href="article.html?id=${article.id}" class="article-link">
+                        <article class="article-card">
+                            <img src="${article.image}" class="card-img" alt="${article.title}">
+                            <div class="article-content">
+                                <span class="tag" style="background:#004aad; margin-bottom:5px; display:inline-block;">${article.category}</span>
+                                <h4>${article.title}</h4>
+                                <p>${article.summary}</p>
+                            </div>
+                        </article>
+                    </a>
+                `;
+            });
+        } else {
+            categoryContainer.innerHTML = "<p>No articles found.</p>";
+        }
     }
 }
 
 /* =========================================
    SIMULATEUR DE SCORES EN DIRECT
    ========================================= */
-
 let liveMatches = [
     { id: 1, sport: "Football", home: "Man Utd", away: "Tottenham", hScore: 2, aScore: 1, time: 72, status: "LIVE" },
     { id: 2, sport: "Football", home: "Barcelona", away: "Sevilla", hScore: 0, aScore: 0, time: 12, status: "LIVE" },
@@ -371,7 +422,7 @@ function simulateGameUpdates() {
     liveMatches.forEach(match => {
         if (match.sport === "Football" && match.time < 90) {
             match.time++; // +1 minute
-            if (Math.random() > 0.95) { // 5% chance but
+            if (Math.random() > 0.95) { 
                 if (Math.random() > 0.5) match.hScore++;
                 else match.aScore++;
             }
@@ -384,12 +435,9 @@ function simulateGameUpdates() {
     renderLiveScores();
 }
 
-// GESTION DU SONDAGE
 function votePoll(option) {
     alert("Thanks for voting for: " + option);
 }
 
-// Lancement
 renderLiveScores();
-// 60000ms = 60 secondes (Vrai temps réel)
 setInterval(simulateGameUpdates, 60000);

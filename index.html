@@ -17,28 +17,45 @@
             <div class="logo">SportsMag Live</div>
             <p>Passion. Performance. Glory.</p>
         </div>
+        
         <nav>
-            <a href="index.html" class="home-icon" title="Back to Home">🏠</a>
+            <a href="index.html" class="nav-item home-icon">🏠</a>
+            <a href="category.html" class="nav-item">All News</a>
             
-            <a href="category.html">All News</a>
-            <a href="category.html?cat=athletics">Athletics</a>
-            <a href="category.html?cat=football">Football</a>
-            <a href="category.html?cat=f1">Formula 1</a>
-            <a href="category.html?cat=golf">Golf</a>
-            <a href="category.html?cat=cycling">Cycling</a>
-            <a href="category.html?cat=tennis">Tennis</a>
+            <div class="dropdown">
+                <button class="dropbtn">Sports ▾</button>
+                <div class="dropdown-content">
+                    <a href="category.html?cat=athletics">Athletics</a>
+                    <a href="category.html?cat=football">Football</a>
+                    <a href="category.html?cat=f1">Formula 1</a>
+                    <a href="category.html?cat=golf">Golf</a>
+                    <a href="category.html?cat=cycling">Cycling</a>
+                    <a href="category.html?cat=tennis">Tennis</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">World ▾</button>
+                <div class="dropdown-content">
+                    <a href="category.html?cat=politics">Politics</a>
+                    <a href="category.html?cat=tech">Tech</a>
+                </div>
+            </div>
+
+            <a href="category.html?cat=reportage" class="nav-item">Reportage 🎥</a>
+            <a href="category.html?cat=podcast" class="nav-item">Podcast 🎙️</a>
         </nav>
     </header>
 
     <div class="container">
         <section class="hero">
             <div class="hero-main">
-                <a href="article.html?id=athletics" class="hero-link">
-                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80" alt="Athletics Track" class="hero-img">
+                <a href="article.html?id=zelensky-deal" class="hero-link">
+                    <img src="https://opinion-images.wsj.net/im-76447928/?size=1.5" alt="Zelensky" class="hero-img">
                     <div class="hero-text">
-                        <span class="tag">Athletics</span>
-                        <h2>John Ridgeon says I was too pessimistic about his sport — and he might be right</h2>
-                        <p>World Athletics CEO argues the sport is growing faster than critics think.</p>
+                        <span class="tag">Politics</span>
+                        <h2>Zelensky Under Pressure to Cede Territory for 'Christmas Deal'</h2>
+                        <p>The Ukrainian President faces a major diplomatic dilemma as US pushes for a peace agreement.</p>
                     </div>
                 </a>
             </div>
@@ -47,9 +64,9 @@
                 <div class="sidebar-box">
                     <h3>Trending</h3>
                     <ul style="list-style: none; padding-left: 0;">
-                        <li style="margin-bottom: 10px;"><a href="article.html?id=alonso"><strong>Football:</strong> Real Madrid Crisis.</a></li>
+                        <li style="margin-bottom: 10px;"><a href="article.html?id=reform-uk"><strong>Politics:</strong> Farage Scrutiny.</a></li>
                         <li style="margin-bottom: 10px;"><a href="article.html?id=f1"><strong>F1:</strong> 2026 Rules.</a></li>
-                        <li style="margin-bottom: 10px;"><a href="article.html?id=golf"><strong>Golf:</strong> Greg Owen wins.</a></li>
+                        <li style="margin-bottom: 10px;"><a href="article.html?id=meta-ai"><strong>Tech:</strong> EU vs Meta.</a></li>
                     </ul>
                 </div>
                 
@@ -65,57 +82,46 @@
             <main>
                 <h3 class="section-title">Latest Headlines</h3>
 
-                <a href="article.html?id=alonso" class="article-link">
+                <a href="article.html?id=reform-uk" class="article-link">
                     <article class="article-card">
-                        <img src="https://i.guim.co.uk/img/media/913c6b9720e0ac2ff32e66c4b1da3b673fbedacb/107_79_1151_921/master/1151.jpg?width=620&dpr=1&s=none&crop=none" alt="Xabi Alonso" class="card-img">
+                        <img src="https://images.unsplash.com/photo-1529108190281-9a4f620bc2d8?auto=format&fit=crop&w=800&q=80" alt="Farage" class="card-img">
                         <div class="article-content">
-                            <span class="tag" style="background-color: #004aad;">Football</span>
-                            <h4>Real Madrid show fight but Alonso’s future hangs in balance</h4>
-                            <p>Another setback leaves the manager on the brink despite a spirited performance.</p>
+                            <span class="tag" style="background-color: #333;">Politics</span>
+                            <h4>Reform UK Leader Farage Under Scrutiny Over Past Remarks</h4>
+                            <p>Pressure mounts on Nigel Farage regarding Russian ties and allegations.</p>
                         </div>
                     </article>
                 </a>
 
-                <a href="article.html?id=golf" class="article-link">
+                <a href="article.html?id=trump-doctrine" class="article-link">
                     <article class="article-card">
-                        <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&w=800&q=80" alt="Golf" class="card-img">
+                        <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-740116,resizemode-75,msid-126326588/news/international/us/what-is-don-roe-doctrine-trump-rebrands-the-monroe-doctrine-after-nicols-maduro-is-captured.jpg" alt="Trump Doctrine" class="card-img">
                         <div class="article-content">
-                            <span class="tag" style="background-color: #28a745;">Golf</span>
-                            <h4>Greg Owen clinches MCB Mauritius Legends title</h4>
-                            <p>A dramatic finale sees the Englishman win by a single stroke.</p>
+                            <span class="tag" style="background-color: #d93025;">Geopolitics</span>
+                            <h4>The Trump Doctrine: Re-Carving the Global Landscape</h4>
+                            <p>A new strategy prioritizes spheres of influence and a return to the Monroe Doctrine.</p>
                         </div>
                     </article>
                 </a>
 
-                <a href="article.html?id=f1" class="article-link">
+                <a href="article.html?id=migration-deal" class="article-link">
                     <article class="article-card">
-                        <img src="https://cdn-5.motorsport.com/images/amp/2548KwJ0/s1000/f1-2026-fia-car-renders.webp" alt="F1" class="card-img">
+                        <img src="https://img.lemde.fr/2025/10/24/246/0/2953/1476/1342/671/60/0/0d15052_upload-1-63jlwlamejj0-003-millerand-dscf8115.jpg" alt="Migration Deal" class="card-img">
                         <div class="article-content">
-                            <span class="tag" style="background-color: #d93025;">Formula 1</span>
-                            <h4>The 2026 F1 Era: A Bold New Rulebook</h4>
-                            <p>Lighter cars and sustainable fuels: F1 steps into a radically different era.</p>
+                            <span class="tag" style="background-color: #004aad;">Politics</span>
+                            <h4>Migrant Lives in Limbo: The UK-France Deal</h4>
+                            <p>The reality behind the controversial 'One In, One Out' agreement causing distress.</p>
                         </div>
                     </article>
                 </a>
 
-                <a href="article.html?id=cycling" class="article-link">
+                <a href="article.html?id=meta-ai" class="article-link">
                     <article class="article-card">
-                        <img src="https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/45eb/live/88f0ddf0-ced8-11f0-9569-abed8c645734.jpg.webp" alt="Cycling" class="card-img">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="Meta" class="card-img">
                         <div class="article-content">
-                            <span class="tag" style="background-color: #e6007e;">Cycling</span>
-                            <h4>Bulgaria to Host 2026 Giro d'Italia Start</h4>
-                            <p>The Grand Tour will begin abroad for the second year in a row.</p>
-                        </div>
-                    </article>
-                </a>
-
-                <a href="article.html?id=tennis" class="article-link">
-                    <article class="article-card">
-                        <img src="https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/a8b0/live/1f874a00-ce9e-11f0-a58d-8f327674649c.jpg.webp" alt="Tennis" class="card-img">
-                        <div class="article-content">
-                            <span class="tag" style="background-color: #28a745;">Tennis</span>
-                            <h4>Italian Icon Nicola Pietrangeli Dies at 92</h4>
-                            <p>Tributes pour in for the two-time Roland Garros champion.</p>
+                            <span class="tag" style="background-color: #1877f2;">Tech</span>
+                            <h4>EU Investigates Meta Over WhatsApp's AI Rollout</h4>
+                            <p>Antitrust probe launched into whether Meta restricts third-party AI providers.</p>
                         </div>
                     </article>
                 </a>
@@ -129,7 +135,7 @@
                         <p style="font-size:0.8rem; color:#666;">Connecting...</p>
                     </div>
                 </div>
-
+                
                 <div class="sidebar-widget">
                     <h3>Weekly Poll</h3>
                     <p>Who will win the Premier League?</p>
@@ -144,21 +150,10 @@
     <footer>
         <div class="container">
             <h3>SportsMag Live</h3>
-            <p style="max-width: 600px; margin: 0 auto 20px auto;">
-                Bringing you the fastest scores, deepest analysis, and biggest stories from the world of sports.
-            </p>
-            
-            <div class="social-links">
-                <a href="#">📘</a> <a href="#">🐦</a> <a href="#">📸</a> <a href="#">▶️</a> </div>
-
-            <p style="margin-top: 30px; font-size: 0.8rem;">&copy; 2025 SportsMag Live. Class Project.</p>
-
+            <p style="max-width: 600px; margin: 0 auto 20px auto;">Bringing you the fastest scores, deepest analysis, and biggest stories.</p>
+            <div class="social-links"><a href="#">📘</a> <a href="#">🐦</a> <a href="#">📸</a></div>
             <div class="team-credits">
-                <span><strong>Kylian :</strong> Web Engineering</span>
-                <span>•</span>
-                <span><strong>Eva-Marie :</strong> Editor</span>
-                <span>•</span>
-                <span><strong>Lucas :</strong> Editor</span>
+                <span><strong>Kylian :</strong> Web Developer</span> • <span><strong>Lucas :</strong> Head of Media</span> • <span><strong>Eva-Marie :</strong> Editor-in-Chief</span> • <span><strong>Remi :</strong> Editor</span>
             </div>
         </div>
     </footer>
