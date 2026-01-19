@@ -151,6 +151,25 @@ const db = [
             <p>Michael Campbell, the 2005 U.S. Open champion, fired 66–65 over the weekend to tie for fifth with Scotland’s Stephen Gallacher, England’s Andrew Marshall, and Farrelly.</p>
             <p>Welshman Jamie Donaldson, remembered for holing the winning putt in the 2014 Ryder Cup, rebounded from a poor second round with a strong 66.</p>
         ` 
+    },
+    {
+        id: "duplantis",
+        category: "athletics",
+        title: "Armand “Mondo” Duplantis: The Pole Vault King",
+        author: "Gabriel",
+        date: "Mon 19 Jan 2026",
+        image: "https://img.redbull.com/images/q_auto,f_auto/redbullcom/2025/9/17/l7mdgozf26wpgsszgqgk/armand-duplantis-world-record-6-30-tokyo",
+        summary: "Armand Duplantis continues to break records and inspire athletes worldwide with his amazing talent and consistency.",
+        trust: "High",
+        sources: ["World Athletics", "Red Bull"],
+        keyPoints: ["Has broken the world record multiple times.", "Won Olympic gold and world championships.", "Inspires young athletes with his positive attitude."],
+        content: `
+            <p>Armand “Mondo” Duplantis is a famous pole vaulter who represents Sweden. He was born in the United States, and he grew up there. First, sport was always important in his life because his father was a pole vaulter and his mother was a former athlete. As a result, he started pole vaulting when he was very young.</p>
+            <p>Duplantis quickly became one of the best athletes in the world. In addition, he has broken the world record many times, which shows his amazing talent. He is known for jumping higher than any other pole vaulter in history. Because of this, many people think he is one of the greatest athletes in track and field today.</p>
+            <p>Moreover, Duplantis is very consistent in competitions. He often wins big events and almost never loses. For example, he has won Olympic gold medals and world championships. However, he always says that he wants to improve and jump higher, even after his success.</p>
+            <p>Also, fans admire him for his positive attitude and love for the sport. He trains very hard and stays focused on his goals. Therefore, he inspires many young athletes around the world.</p>
+            <p>Finally, Armand Duplantis has changed the history of pole vaulting. He continues to break records and make the sport more exciting. In the future, he will probably achieve even more great results.</p>
+        `
     }
 ];
 
